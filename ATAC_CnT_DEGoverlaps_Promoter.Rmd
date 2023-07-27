@@ -1,0 +1,525 @@
+---
+title: "ERCre ATAC/CnT: Promoters"
+output: 
+  html_document:
+    self_contained: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r Packages, results = "hide", warning = FALSE, message=FALSE, echo=FALSE}
+
+suppressPackageStartupMessages({
+  library(UpSetR)
+  })
+
+```
+
+## DEG overlaps {.tabset}
+
+<br/>
+
+### H vs C
+
+```{r echo=FALSE, message=FALSE}
+
+# Load H vs C promoter diff results
+ATAC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/H_vs_C/ATAC_sigDEGPr_H_vs_C.csv")
+H3K4me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/H_vs_C/H3K4me3_sigDEGPr_H_vs_C.csv")
+H3K4me1 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/H_vs_C/H3K4me1_sigDEGPr_H_vs_C.csv")
+H3K27ac <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/H_vs_C/H3K27ac_sigDEGPr_H_vs_C.csv")
+H3K27me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/H_vs_C/H3K27me3_sigDEGPr_H_vs_C.csv")
+
+chromDataList <- list(atac=ATAC, h3k4me3=H3K4me3, h3k4me1=H3K4me1, h3k27ac=H3K27ac, h3k27me3=H3K27me3)
+
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### Upregulated genes in H
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+<br/>
+
+#### Upregulated genes in C
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+
+### HC vs CC
+
+```{r echo=FALSE, message=FALSE}
+
+# Load HC vs CC promoter diff results
+ATAC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/HC_vs_CC/ATAC_sigDEGPr_HC_vs_CC.csv")
+H3K4me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/HC_vs_CC/H3K4me3_sigDEGPr_HC_vs_CC.csv")
+H3K4me1 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/HC_vs_CC/H3K4me1_sigDEGPr_HC_vs_CC.csv")
+H3K27ac <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/HC_vs_CC/H3K27ac_sigDEGPr_HC_vs_CC.csv")
+H3K27me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/HC_vs_CC/H3K27me3_sigDEGPr_HC_vs_CC.csv")
+
+chromDataList <- list(atac=ATAC, h3k4me3=H3K4me3, h3k4me1=H3K4me1, h3k27ac=H3K27ac, h3k27me3=H3K27me3)
+
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### Upregulated genes in HC
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+<br/>
+
+#### Upregulated genes in CC
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+ 
+### HH vs CC
+
+```{r echo=FALSE, message=FALSE}
+
+# Load HH vs CC promoter diff results
+ATAC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/HH_vs_CC/ATAC_sigDEGPr_HH_vs_CC.csv")
+H3K4me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/HH_vs_CC/H3K4me3_sigDEGPr_HH_vs_CC.csv")
+H3K4me1 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/HH_vs_CC/H3K4me1_sigDEGPr_HH_vs_CC.csv")
+H3K27ac <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/HH_vs_CC/H3K27ac_sigDEGPr_HH_vs_CC.csv")
+H3K27me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/HH_vs_CC/H3K27me3_sigDEGPr_HH_vs_CC.csv")
+
+chromDataList <- list(atac=ATAC, h3k4me3=H3K4me3, h3k4me1=H3K4me1, h3k27ac=H3K27ac, h3k27me3=H3K27me3)
+
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### Upregulated genes in HH
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+<br/>
+
+#### Upregulated genes in CC
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+
+### HHC vs CCC
+
+```{r echo=FALSE, message=FALSE}
+
+# Load HHC vs CCC promoter diff results
+ATAC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/HHC_vs_CCC/ATAC_sigDEGPr_HHC_vs_CCC.csv")
+H3K4me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/HHC_vs_CCC/H3K4me3_sigDEGPr_HHC_vs_CCC.csv")
+H3K4me1 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/HHC_vs_CCC/H3K4me1_sigDEGPr_HHC_vs_CCC.csv")
+H3K27ac <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/HHC_vs_CCC/H3K27ac_sigDEGPr_HHC_vs_CCC.csv")
+H3K27me3 <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/HHC_vs_CCC/H3K27me3_sigDEGPr_HHC_vs_CCC.csv")
+
+chromDataList <- list(atac=ATAC, h3k4me3=H3K4me3, h3k4me1=H3K4me1, h3k27ac=H3K27ac, h3k27me3=H3K27me3)
+
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### Upregulated genes in HHC
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+<br/>
+
+#### Upregulated genes in CCC
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("h3k27me3", "h3k27ac", "h3k4me1", "h3k4me3", "atac"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per dataset")
+
+```
+
+### ATAC
+
+```{r echo=FALSE, message=FALSE}
+
+# Load H vs C promoter diff results
+H_vs_C <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/H_vs_C/ATAC_sigDEGPr_H_vs_C.csv")
+HC_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/HC_vs_CC/ATAC_sigDEGPr_HC_vs_CC.csv")
+HH_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/HH_vs_CC/ATAC_sigDEGPr_HH_vs_CC.csv")
+HHC_vs_CCC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/ATAC/HHC_vs_CCC/ATAC_sigDEGPr_HHC_vs_CCC.csv")
+
+chromDataList <- list(H_vs_C=H_vs_C, HC_vs_CC=HC_vs_CC, HH_vs_CC=HH_vs_CC, HHC_vs_CCC=HHC_vs_CCC)
+
+allDEGs <- lapply(chromDataList, function(x) {x$external_gene_name})
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### All DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(allDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+
+#### Upregulated DEGs 
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+#### Downregulated DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+
+### H3K4me3
+
+```{r echo=FALSE, message=FALSE}
+
+# Load H vs C promoter diff results
+H_vs_C <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/H_vs_C/H3K4me3_sigDEGPr_H_vs_C.csv")
+HC_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/HC_vs_CC/H3K4me3_sigDEGPr_HC_vs_CC.csv")
+HH_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/HH_vs_CC/H3K4me3_sigDEGPr_HH_vs_CC.csv")
+HHC_vs_CCC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me3/HHC_vs_CCC/H3K4me3_sigDEGPr_HHC_vs_CCC.csv")
+
+chromDataList <- list(H_vs_C=H_vs_C, HC_vs_CC=HC_vs_CC, HH_vs_CC=HH_vs_CC, HHC_vs_CCC=HHC_vs_CCC)
+
+allDEGs <- lapply(chromDataList, function(x) {x$external_gene_name})
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### All DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(allDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+
+#### Upregulated DEGs 
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+#### Downregulated DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+
+### H3K4me1
+
+```{r echo=FALSE, message=FALSE}
+
+# Load H vs C promoter diff results
+H_vs_C <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/H_vs_C/H3K4me1_sigDEGPr_H_vs_C.csv")
+HC_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/HC_vs_CC/H3K4me1_sigDEGPr_HC_vs_CC.csv")
+HH_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/HH_vs_CC/H3K4me1_sigDEGPr_HH_vs_CC.csv")
+HHC_vs_CCC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K4me1/HHC_vs_CCC/H3K4me1_sigDEGPr_HHC_vs_CCC.csv")
+
+chromDataList <- list(H_vs_C=H_vs_C, HC_vs_CC=HC_vs_CC, HH_vs_CC=HH_vs_CC, HHC_vs_CCC=HHC_vs_CCC)
+
+allDEGs <- lapply(chromDataList, function(x) {x$external_gene_name})
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### All DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(allDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+
+#### Upregulated DEGs 
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+#### Downregulated DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+
+### H3K27ac
+
+```{r echo=FALSE, message=FALSE}
+
+# Load H vs C promoter diff results
+H_vs_C <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/H_vs_C/H3K27ac_sigDEGPr_H_vs_C.csv")
+HC_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/HC_vs_CC/H3K27ac_sigDEGPr_HC_vs_CC.csv")
+HH_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/HH_vs_CC/H3K27ac_sigDEGPr_HH_vs_CC.csv")
+HHC_vs_CCC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27ac/HHC_vs_CCC/H3K27ac_sigDEGPr_HHC_vs_CCC.csv")
+
+chromDataList <- list(H_vs_C=H_vs_C, HC_vs_CC=HC_vs_CC, HH_vs_CC=HH_vs_CC, HHC_vs_CCC=HHC_vs_CCC)
+
+allDEGs <- lapply(chromDataList, function(x) {x$external_gene_name})
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### All DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(allDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+
+#### Upregulated DEGs 
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+#### Downregulated DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+
+### H3K27me3
+
+```{r echo=FALSE, message=FALSE}
+
+# Load H vs C promoter diff results
+H_vs_C <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/H_vs_C/H3K27me3_sigDEGPr_H_vs_C.csv")
+HC_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/HC_vs_CC/H3K27me3_sigDEGPr_HC_vs_CC.csv")
+HH_vs_CC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/HH_vs_CC/H3K27me3_sigDEGPr_HH_vs_CC.csv")
+HHC_vs_CCC <- read.csv("~/public/_Projects/AT_HFD_Memory/Epigenetic_memory/ERCre/Promoters/diffAnalysis_wo_CCC_long_2/H3K27me3/HHC_vs_CCC/H3K27me3_sigDEGPr_HHC_vs_CCC.csv")
+
+chromDataList <- list(H_vs_C=H_vs_C, HC_vs_CC=HC_vs_CC, HH_vs_CC=HH_vs_CC, HHC_vs_CCC=HHC_vs_CCC)
+
+allDEGs <- lapply(chromDataList, function(x) {x$external_gene_name})
+upDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "up"), "external_gene_name"]})
+downDEGs <- lapply(chromDataList, function(x) {x[which(x$regulation == "down"), "external_gene_name"]})
+
+```
+
+<br/>
+
+#### All DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(allDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+
+#### Upregulated DEGs 
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(upDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+<br/>
+
+#### Downregulated DEGs
+<br/>
+
+```{r echo=FALSE, message=FALSE, fig.width=12, fig.height=8}
+
+# Upset plot
+upset(fromList(downDEGs), sets = c("HHC_vs_CCC", "HH_vs_CC", "HC_vs_CC", "H_vs_C"),
+      order.by = c("freq", "degree"), mb.ratio = c(0.55, 0.45), keep.order = TRUE,
+      point.size = 3, line.size = 1, text.scale = c(1,1,1,1,1.5,1.2),
+      mainbar.y.label = "DEG intersections", sets.x.label = "DEGs per comparison")
+
+```
+
+### Session information
+```{r session_info, echo = FALSE}
+
+devtools::session_info()
+
+```
