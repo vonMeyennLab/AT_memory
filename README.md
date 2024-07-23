@@ -9,11 +9,11 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 ## Contents of this Repository
 #### 1. :file_folder: ```Rscripts```</p>
 &emsp;&emsp;:file_folder: ```Epigenetics ```</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```DifferentialAnalysis```&ensp;*Contains RScripts to perform differential analysis of promoters, enhancers, generate alluvial plots and do GSEA*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```MOFA```&ensp;*Contains RScripts to prep the input for MOFA and running MOFA*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```DifferentialAnalysis```&ensp;*Contains Rscripts to perform differential analysis of promoters, enhancers, generate alluvial plots and do GSEA*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```MOFA```&ensp;*Contains RSsripts to prep the input for MOFA and running MOFA*</p>
 
-&emsp;&emsp;:file_folder: ```snRNAseq_Mouse ```&ensp;*Contains RScripts to analyse mouse epiAT snRNA-seq data and generate plots*</p>
-&emsp;&emsp;:file_folder: ```snRNAseq_Human ```&ensp;*Contains RScripts to analyse human snRNA-seq data and generate plots*</p>
+&emsp;&emsp;:file_folder: ```snRNAseq_Mouse ```&ensp;*Contains Rscripts to analyse mouse epiAT snRNA-seq data and generate plots*</p>
+&emsp;&emsp;:file_folder: ```snRNAseq_Human ```&ensp;*Contains Rscripts to analyse human snRNA-seq data and generate plots*</p>
 
 #### 2. :file_folder: ```ChromHMM```</p>
 &emsp;&emsp;:file_folder: ```ChromHMM```&ensp;*Commands and outputs of ChroHMM analysis (enhancers)*</p>
