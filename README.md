@@ -25,7 +25,7 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 
 #### 2. :file_folder: ```ChromHMM```</p>
 &emsp;&emsp;:file_folder: ```ChromHMM```&ensp;*Commands and outputs of ChroHMM analysis (enhancers)*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```bed```&ensp;*Enhancer bed files for adipocytes: all adipocytes, only for young mice (C, H, CC_s, HC), and only for old mice (CC_l, HH, CCC, HHC)*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```tracks```&ensp;*Enhancer bed files for adipocytes: all adipocytes, only for young mice (C, H, CC_s, HC), and only for old mice (CC_l, HH, CCC, HHC)*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```scripts```&ensp;*Commands for Cut&Tag based ChromHMM analysis*</p>
 
 #### 3. :file_folder: ```SNPdemux```&ensp;*Contains code to run SNP demultiplexing*</p>
