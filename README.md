@@ -41,3 +41,6 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 
 ## ShinyApps
 [ShinyApp to explore snRNAseq data](link) This link will be available upon acceptance.
+
+## Accession Codes
+GEO: GSE236580![image](https://github.com/user-attachments/assets/edab7a47-6b3e-4881-bfbf-3b1660748b6e)
