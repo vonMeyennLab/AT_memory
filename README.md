@@ -28,7 +28,7 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```tracks```&ensp;*Enhancer bed files for adipocytes: all adipocytes, only for young mice (C, H, CC_s, HC), and only for old mice (CC_l, HH, CCC, HHC)*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```scripts```&ensp;*Commands for Cut&Tag based ChromHMM analysis*</p>
 
-#### 3. :file_folder: ```SNPdemux```&ensp;*Contains code to run SNP demultiplexing*</p>
+#### 3. :file_folder: ```cellSNP_Vireo_demux```&ensp;*Contains code to run SNP demultiplexing based on tools cellSNP and vireo*</p>
 
 #### 4. :file_folder: ```DEGs```&ensp;*Contains cell type specific DEGs for human and mouse AT (obese vs lean; weight loss vs lean)*</p>
 
