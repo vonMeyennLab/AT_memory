@@ -1,0 +1,11 @@
+name: sc-snp-demux
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cellsnp-lite
+  - pip
+  - python
+  - pip:
+    - vireoSNP

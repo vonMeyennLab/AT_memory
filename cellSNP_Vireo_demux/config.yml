@@ -1,0 +1,6 @@
+SAMPLE_DIR:
+        "/path/to/samples"
+REF_DIR:
+        "/path/to/refdir"
+REF_VCF_NAME:
+        "genome1K.phase3.SNP_AF5e2.chr1toX.hg38"
