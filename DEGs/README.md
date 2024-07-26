@@ -2,8 +2,8 @@
 
 ## Files
 
-- [DEGs_humanAT.xlxs](DEGs_humanAT.xlxs): DEGs per cell type for omAT and scAT from MTSS, LTSS and NEFA studies. T0 vs Lean and T1 vs Lean. 
-- [DEGs_mouseAT.xlxs](DEGs_mouseAT.xlxs): DEGs per cell type for epiAT. Obese vs Control (H vs C;HH vs CC) and Weight Loss vs Control (HC vs CC; HHC vs CCC)
+- [DEGs_humanAT.xlsx](DEGs_humanAT.xlsx): DEGs per cell type for omAT and scAT from MTSS, LTSS and NEFA studies. T0 vs Lean and T1 vs Lean. 
+- [DEGs_mouseAT.xlsx](DEGs_mouseAT.xlsx): DEGs per cell type for epiAT. Obese vs Control (H vs C;HH vs CC) and Weight Loss vs Control (HC vs CC; HHC vs CCC)
 
 
 ## Workflow description
