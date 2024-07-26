@@ -2,7 +2,7 @@
 
 ## Folders
 
-- [0_Preprocessing](put link): QC, annotation of cell types
+- [0_Preprocessing](link): QC, annotation of cell types
 - [1_SampleIntegration](link): Integration of omAT or scAT samples from one cohort or of adipocytes from one tissue.
 - [2_DifferentialAnalysis](link): UMAP, barplots, dotplots, differential analysis per cell type, transcriptional retention analysis (pie charts), and explanation analysis (Figure 6)
 
