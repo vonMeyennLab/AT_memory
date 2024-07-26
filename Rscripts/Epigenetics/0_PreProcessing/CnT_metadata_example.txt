@@ -1,2 +1,0 @@
-Name	ID	histone	replicate	condition	experiment	timepoint	peakFile	bamFile	QC
-full sample name	shortened name	hPTM or ATAC	biological rep	C or HC etc	GMO used	short or long	path to bed file	path to bam file	yes or no
