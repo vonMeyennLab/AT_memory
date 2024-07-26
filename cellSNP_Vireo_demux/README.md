@@ -7,7 +7,7 @@
 - [config.yml](config.yml) (*Required*): Input configuration specifying 3 important parameters:
 	1. The path to the 10X output folder. Must contain "possorted_genome_bam.bam" and "filtered_feature_bc_matrix"
 	2. The path to the directory containing the reference SNPs
-	3. The VCF file name. We used 'genome1K.phase3.SNP_AF5e2.chr1toX.hg38' from the (1000 genome project)[https://sourceforge.net/projects/cellsnp/files/SNPlist/].
+	3. The VCF file name. We used 'genome1K.phase3.SNP_AF5e2.chr1toX.hg38' from the [1000 genome project](https://sourceforge.net/projects/cellsnp/files/SNPlist/).
 - [sc_snp_scaling.sh](sc_snp_scaling.sh): Example slurm script calling the Snakemake workflow on some samples
 
 ## Workflow description
