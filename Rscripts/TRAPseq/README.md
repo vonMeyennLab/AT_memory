@@ -2,8 +2,8 @@
 
 ## Files
 
-- [DifferentialAnalysis]([link](https://github.com/vonMeyennLab/AT_memory/blob/main/Rscripts/TRAPseq/DifferentialAnalysis.R)): DE analysis of TRAPseq
-- [TRAPseq_snRNAseq_correlation.R]([link](https://github.com/vonMeyennLab/AT_memory/blob/main/Rscripts/TRAPseq/TRAPseq_snRNAseq_correlation.R)): Perform count extraction for snRNAseq and correlation with TRAPseq counts.
+- [DifferentialAnalysis](https://github.com/vonMeyennLab/AT_memory/blob/main/Rscripts/TRAPseq/DifferentialAnalysis.R): DE analysis of TRAPseq
+- [TRAPseq_snRNAseq_correlation](https://github.com/vonMeyennLab/AT_memory/blob/main/Rscripts/TRAPseq/TRAPseq_snRNAseq_correlation.R): Perform count extraction for snRNAseq and correlation with TRAPseq counts.
 
 
 ## Workflow
