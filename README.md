@@ -11,7 +11,7 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 &emsp;&emsp;:file_folder: ```Epigenetics ```</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*Peak QC, annotation, and quantification*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```1_MOFA```&ensp;*Cut&Tag and ATACseq based multi-omics factor analysis*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Differential analysis of promoters, enhancers, alluvial plots, andGSEA*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Differential analysis of promoters, enhancers, alluvial plots, and GSEA*</p>
 
 &emsp;&emsp;:file_folder: ```TRAP```&ensp;*Contains Rscripts for analysis of TRAP-seq data and correlation with snRNAseq data*</p>
 
