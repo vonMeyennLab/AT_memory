@@ -2,9 +2,9 @@
 
 ## Folders
 
-- [0_Preprocessing](link): QC, annotation of cell types
-- [1_SampleIntegration](link): Integration of omAT or scAT samples from one cohort or of adipocytes from one tissue.
-- [2_DifferentialAnalysis](link): UMAP, barplots, dotplots, differential analysis per cell type, transcriptional retention analysis (pie charts), and explanation analysis (Figure 6)
+- [0_Preprocessing](https://github.com/vonMeyennLab/AT_memory/tree/main/Rscripts/snRNAseq_Mouse/0_PreProcessing): QC, annotation of cell types
+- [1_SampleIntegration](https://github.com/vonMeyennLab/AT_memory/tree/main/Rscripts/snRNAseq_Mouse/1_SampleIntegration): Integration of omAT or scAT samples from one cohort or of adipocytes from one tissue.
+- [2_DifferentialAnalysis](https://github.com/vonMeyennLab/AT_memory/tree/main/Rscripts/snRNAseq_Mouse/2_DifferentialAnalysis): UMAP, barplots, dotplots, differential analysis per cell type, transcriptional retention analysis (pie charts), and explanation analysis (Figure 6)
 
 
 ## Workflow
