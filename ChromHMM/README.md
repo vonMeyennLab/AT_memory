@@ -2,8 +2,8 @@
 
 ## Folders
 
-- [scripts](put link): Scripts to run ChromHMM
-- [tracks](link): Enhancer tracks for adipocytes for all adipocytes, only for adipocytes from C,H,CC_s, HC or CC_l,HH,CCC,HHC mice
+- [scripts](https://github.com/vonMeyennLab/AT_memory/tree/main/ChromHMM/scripts): Scripts to run ChromHMM
+- [tracks](https://github.com/vonMeyennLab/AT_memory/tree/main/ChromHMM/tracks): Enhancer tracks for adipocytes for all adipocytes, only for adipocytes from C,H,CC_s, HC or CC_l,HH,CCC,HHC mice
 
 
 
