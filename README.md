@@ -9,19 +9,21 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 ## Contents of this Repository
 #### 1. :file_folder: ```Rscripts```</p>
 &emsp;&emsp;:file_folder: ```Epigenetics ```</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*Contains Rscripts for peak QC, annotation, and quantification*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```1_MOFA```&ensp;*Contains Rscripts to perform Cut&Tag and ATACseq based multi-omics factor analysis*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Contains Rscripts to perform differential analysis of promoters, enhancers, generate alluvial plots and do GSEA*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*Peak QC, annotation, and quantification*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```1_MOFA```&ensp;*Cut&Tag and ATACseq based multi-omics factor analysis*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Differential analysis of promoters, enhancers, alluvial plots, andGSEA*</p>
 
 &emsp;&emsp;:file_folder: ```TRAP```&ensp;*Contains Rscripts for analysis of TRAP-seq data and correlation with snRNAseq data*</p>
 
 &emsp;&emsp;:file_folder: ```snRNAseq_Mouse ```&ensp;*Contains Rscripts to analyse mouse epiAT snRNA-seq data and generate plots*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*Contains Rscripts for QC, integration and reference mapping*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```1_DifferentialAnalysis```&ensp;*Contains Rscripts for cell-type specific DE and transcriptional retention analysis*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;* QC and reference mapping*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```1_SampleIntegration```&ensp;*Integration of snRNAseq datasets*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Cell-type specific DE and transcriptional retention analysis*</p>
 
 &emsp;&emsp;:file_folder: ```snRNAseq_Human ```&ensp;*Contains Rscripts to analyse human snRNA-seq data and generate plots*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*Contains Rscripts for QC, integration and reference mapping*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```1_DifferentialAnalysis```&ensp;*Contains Rscripts for cell-type specific DE and transcriptional retention analysis*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;* QC and reference mapping*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```1_SampleIntegration```&ensp;*Integration of snRNAseq datasets*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Cell-type specific DE and transcriptional retention analysis*</p>
 
 #### 2. :file_folder: ```ChromHMM```</p>
 &emsp;&emsp;:file_folder: ```ChromHMM```&ensp;*Commands and outputs of ChroHMM analysis (enhancers)*</p>
