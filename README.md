@@ -45,6 +45,7 @@ GEO: GSE236580![image](https://github.com/user-attachments/assets/edab7a47-6b3e-
 
 ## Associated Repositories 
 1. [NextFlow Pipeline for CUT&Tag](https://github.com/vonMeyennLab/nf_cutntag)
-2. [NextFlow Pipeline for RNAseq](https://github.com/vonMeyennLab/nf_rnaseq)
+2. [NextFlow Pipeline for PeakCalling](https://github.com/vonMeyennLab/nf_peakcalling)
+3. [NextFlow Pipeline for RNAseq](https://github.com/vonMeyennLab/nf_rnaseq)
 
 
