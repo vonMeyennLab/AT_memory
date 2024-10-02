@@ -1,6 +1,6 @@
 
 # This R script has been used to generate the following figures:
-### Figure 5A
+### Figure 4 and associated Extended Data
 
 library(dplyr)
 library(edgeR)
