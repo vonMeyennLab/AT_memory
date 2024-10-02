@@ -1,4 +1,4 @@
-#### This code can be used to generate stackec barplots used in Figure 1 and associated exteneded data. Note size of texts etc were modified later. 
+#### This code can be used to generate stackec barplots used in Figure 1 and associated exteneded data. Note: size of texts etc were modified later. 
 
 ### load libraries
 library(ggplot2)
