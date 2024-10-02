@@ -1,6 +1,6 @@
 
 # This R script has been used to generate the following figures:
-### Figures 4D, 4E
+### Figure 3 and associated Extended Data
 
 library(MOFA2)
 library(data.table)
