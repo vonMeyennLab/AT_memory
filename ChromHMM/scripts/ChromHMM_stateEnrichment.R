@@ -1,6 +1,6 @@
 
 # This R script has been used to generate the following figures:
-### Figures S10A, S10B, S10C
+### Extended Data Figure 9
 
 library(dplyr)
 library(pheatmap)
