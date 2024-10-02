@@ -1,4 +1,4 @@
-##### This code can be used to generate results and plots supporting Figure 5 and associated Extended Data
+##### This code can be used to generate results and plots supporting Figure 4 and associated Extended Data
 
 ### load libraries
 
