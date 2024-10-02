@@ -1,4 +1,4 @@
-##### This code can be used to generate data supporting the plots in Figures 4,5 and 6.
+##### This code can be used to generate data supporting the plots in Figures 3-5 and associated Extended Data
 
 ### Load libraries
 
