@@ -1,4 +1,4 @@
-##### This code can be used to generate alluvial plots for promoters or enhancers as found in Figures 4 and 5
+##### This code can be used to generate alluvial plots for promoters or enhancers as found in Figures 3 and 4
 
 #### Load libraries
 library(cowplot)
