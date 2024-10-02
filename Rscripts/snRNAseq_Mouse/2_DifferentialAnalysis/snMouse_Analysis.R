@@ -1,4 +1,4 @@
-#### This code for snRNAseq plots (after integration) of mouse epiAT data used in Figures 3 and 6 and associated Extended Data. It also contains the "explanation analysis" from Figure 6.
+#### This code for snRNAseq plots (after integration) of mouse epiAT data used in Figures 2 and 5 and associated Extended Data. It also contains the "explanation analysis" from Figure 6.
 
 
 ###load packages
