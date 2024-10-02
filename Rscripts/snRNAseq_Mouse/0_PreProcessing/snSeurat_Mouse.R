@@ -1,6 +1,6 @@
 
 # This R script has been used to generate results used in 
-# Figures 3,6 and associated extended data
+# Figures 2,5 and associated extended data
 
 library(Seurat)
 library(dplyr)
