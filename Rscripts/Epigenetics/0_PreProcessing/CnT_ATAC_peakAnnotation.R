@@ -1,6 +1,6 @@
 
 # This R script has been used to generate the following figures:
-### Figures S9A, S9B
+### Extended Data Figure 8
 
 library(ChIPseeker)
 library(ChIPpeakAnno)
