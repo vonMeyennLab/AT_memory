@@ -1,6 +1,8 @@
 # Adipose Tissue Retains an Epigenetic Memory of Obesity After Weight Loss
 
-This respository contains code and files related to the publication [Adipose Tissue Retains an Epigenetic Memory of Obesity After Weight Loss](https://doi.org/10.1038/s41586-024-08165-7).
+This respository contains code and files related to the publication: [Hinte, L.C. et al. Adipose tissue retains an epigenetic memory of obesity after weight loss. *Nature*](https://doi.org/10.1038/s41586-024-08165-7).
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13870942.svg)](https://doi.org/10.5281/zenodo.13870942)
 
 ## Abstract
 Reducing body weight to improve metabolic health and other comorbidities is a primary goal in treating obesity. However, maintaining weight loss is a considerable challenge, especially as the body is believed to retain an obesogenic memory that defends against body weight changes. Yet, overcoming this hurdle to long-term effective treatment is difficult because the molecular mechanisms underpinning this phenomenon remain largely unknown. Here, by using single-nuclei RNA-sequencing, we show that both human and mouse adipose tissue retain cellular transcriptional changes after appreciable weight loss. Furthermore, we observed that the mouse adipocyte epigenome continues to bear obesity-induced alterations, negatively affecting adipocyte function. In mice, adipocytes carrying this obesogenic epigenetic memory respond differently to nutritional stimuli, resulting in accelerated rebound weight gain. We find that the epigenetic memory in mice can explain future transcriptional deregulation in response to further high-fat diet feeding. Together, our data suggests the existence of an obesogenic memory in mouse adipocytes, and likely other cells, largely based on stable epigenetic changes. These changes appear to prime cells to respond in a pathological manner to an obesogenic environment and may contribute to the problematic "yo-yo" effect on body weight observed with dieting. Targeting these changes could potentially improve long-term weight management and health outcomes.
@@ -25,12 +27,12 @@ GEO: GSE236580![image](https://github.com/user-attachments/assets/edab7a47-6b3e-
 &emsp;&emsp;:file_folder: ```TRAP```&ensp;*Contains Rscripts for analysis of TRAP-seq data and correlation with snRNAseq data*</p>
 
 &emsp;&emsp;:file_folder: ```snRNAseq_Mouse ```&ensp;*Contains Rscripts to analyse mouse epiAT snRNA-seq data and generate plots*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;* QC and reference mapping*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*QC and reference mapping*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```1_SampleIntegration```&ensp;*Integration of snRNAseq datasets*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Cell-type specific DE and transcriptional retention analysis*</p>
 
 &emsp;&emsp;:file_folder: ```snRNAseq_Human ```&ensp;*Contains Rscripts to analyse human snRNA-seq data and generate plots*</p>
-&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;* QC and reference mapping*</p>
+&emsp;&emsp;&emsp;&emsp;:file_folder: ```0_PreProcessing```&ensp;*QC and reference mapping*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```1_SampleIntegration```&ensp;*Integration of snRNAseq datasets*</p>
 &emsp;&emsp;&emsp;&emsp;:file_folder: ```2_DifferentialAnalysis```&ensp;*Cell-type specific DE and transcriptional retention analysis*</p>
 
