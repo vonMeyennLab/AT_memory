@@ -9,7 +9,7 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 
 
 ## Apps to explore data
-&emsp;[App to explore snRNAseq data, cell type specific gene expression analysis and epigenetic analysis ](http://nme.ethz.ch/ATMemory.html) <p>
+&emsp;[App to explore snRNAseq data, cell type specific gene expression analysis and epigenetic analysis ](https://nme.ethz.ch/Hinte2024/) <p>
 &emsp;[Stand alone human snRNAseq shiny app](https://fgcz-shiny.uzh.ch/nme_ethz_hsAT_memory/) <p>
 &emsp;[Stand alone mouse snRNAseq shiny app](https://fgcz-shiny.uzh.ch/nme_ethz_mmAT_memory/)
 
