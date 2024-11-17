@@ -16,7 +16,7 @@ Reducing body weight to improve metabolic health and other comorbidities is a pr
 &emsp;[Stand alone mouse snRNAseq shiny app](https://fgcz-shiny.uzh.ch/nme_ethz_mmAT_memory/)
 
 ## Accession Codes
-GEO: GSE236580![image](https://github.com/user-attachments/assets/edab7a47-6b3e-4881-bfbf-3b1660748b6e)
+GEO: GSE236580 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE236580)
 
 
 ## Contents of this Repository
